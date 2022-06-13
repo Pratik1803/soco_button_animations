@@ -1,0 +1,72 @@
+.uploadBtn {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.btn {
+		// background: red;
+		width: fit-content;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		padding: 20px;
+		height: 60px;
+		overflow: hidden;
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+		.svg_container {
+			.stage1svg, .stage3svg{
+			    transition: 1s opacity ease-in-out;
+			}
+            .stage3svg{
+                opacity: 0;
+            }
+            .svg1appear{
+                opacity: 1;
+            }
+            .svg1disable{
+                opacity: 0;
+            }
+			width: 45px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.cloud1,
+			.cloud2,
+			.cloud3 {
+				position: absolute;
+                color: #99c0ff;
+			}
+			.cloud1 {
+				left: 40px;
+				animation: cloud1Animate infinite 1s linear;
+			}
+			.cloud2 {
+				left: 20px;
+				animation-delay: 1s;
+				animation: cloud2Animate infinite 0.5s linear;
+			}
+		}
+	}
+}
+@keyframes cloud1Animate {
+	0% {
+		bottom: -20px;
+	}
+	100% {
+		bottom: 50px;
+	}
+}
+@keyframes cloud2Animate {
+	0% {
+		bottom: -20px;
+	}
+	100% {
+		bottom: 50px;
+	}
+}
