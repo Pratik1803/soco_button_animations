@@ -42,9 +42,9 @@ function Add_post() {
 				.to(icon2.current, { color: "#fff", transition: "0.3s" }, "-=0.6")
 				.to(icon3.current, { color: "#fff", transition: "0.3s" }, "-=0.6")
 				.to(icon4.current, { color: "#fff", transition: "0.3s" }, "-=0.6")
-				.to(item1.current, { width: "50px", transition: "0.3s" })
+				.to(item1.current, { width: "70px", transition: "0.3s" })
 				.to(item2.current, { width: "70px", transition: "0.3s" }, "-=0.2")
-				.to(item3.current, { width: "70px", transition: "0.3s" }, "-=0.2")
+				.to(item3.current, { width: "50px", transition: "0.3s" }, "-=0.2")
 				.to(item4.current, { width: "50px", transition: "0.3s" }, "-=0.2");
 		} else {
 			tl.current.reversed(true);
@@ -58,9 +58,9 @@ function Add_post() {
 				<li ref={icon_div1}>
 					<div className={Styles.item_icon}>
 						{/* <Icon icon="carbon:add"  /> */}
-						<Icon icon="bxs:pencil" ref={icon1}/>
+						<Icon icon="fluent:people-team-16-regular" ref={icon1}/>
 					</div>
-					<p ref={item1}>Blogs</p>
+					<p ref={item1}>Projects</p>
 				</li>
 				<li ref={icon_div2}>
 					<div className={Styles.item_icon}>
@@ -72,9 +72,9 @@ function Add_post() {
 				<li ref={icon_div3}>
 					<div className={Styles.item_icon}>
 						{/* <Icon icon="carbon:add"  /> */}
-						<Icon icon="fluent:people-team-16-regular" ref={icon3}/>
+						<Icon icon="bxs:pencil" ref={icon3}/>
 					</div>
-					<p ref={item3}>Projects</p>
+					<p ref={item3}>Blogs</p>
 				</li>
 				<li ref={icon_div4}>
 					<div className={Styles.item_icon}>
