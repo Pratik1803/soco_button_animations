@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Styles from "./buttonHover.module.scss";
 import { Icon } from "@iconify/react";
 
-function ButtonHover() {
+function UploadButton() {
 	const [trigger, setTrigger] = useState("stage1");
 
 	function clicked() {
@@ -58,4 +58,4 @@ function ButtonHover() {
 	);
 }
 
-export default ButtonHover;
+export default UploadButton;

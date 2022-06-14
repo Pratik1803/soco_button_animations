@@ -1,12 +1,14 @@
 import Add_post from "./animations/add_post/Add_Post";
-import ButtonHover from "./animations/button_hover/ButtonHover";
+import Hover_animation from "./animations/hover_animation/Hover_animation";
+import UploadButton from "./animations/upload_button/Upload_btn";
 import Styles from "./App.module.scss";
 
 function App() {
   return (
     <div className={Styles.app}>
-      <Add_post/>
-      {/* <ButtonHover/> */}
+      {/* <Add_post/> */}
+      {/* <UploadButton/> */}
+      <Hover_animation/>
     </div>
   );
 }
