@@ -1,0 +1,130 @@
+.uploadBtn2_container {
+	height: fit-content;
+	width: fit-content;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.uploadBtn2 {
+		width: 250px;
+		height: fit-content;
+		padding: 20px;
+		background: #f5f9ff;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		border-radius: 10px;
+		z-index: 2;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		.progress_bar {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			border-radius: 10px;
+			height: 100%;
+			background-color: #89daff;
+		}
+		.btn_txt {
+			// background-color: blue;
+			height: 35px;
+			overflow-y: hidden;
+			width: fit-content;
+			text-align: center;
+			position: relative;
+			.upload_txt,.uploading_txt,.uploaded_txt{
+			    transition: 0.6s ease-in-out;
+			}
+            .upload_txt{
+                opacity: 1;
+            }
+            .uploaded_txt, .uploading_txt{
+                opacity: 0;
+            }
+		}
+	}
+	.msg {
+		// background: green;
+		text-align: center;
+		padding: 20px 10px;
+		border-radius: 0px 0px 10px 10px;
+		transform: translateY(-70px);
+        transition: 0.6s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		.msg_text {
+			// background-color: yellow;
+			height: 22.5px;
+			overflow-y: hidden;
+			p {
+				font-size: 14px;
+			}
+			.err {
+				color: red;
+			}
+			.success {
+				color: green;
+			}
+		}
+	}
+}
+@keyframes progress {
+	0% {
+		width: 0%;
+	}
+	25% {
+		width: 40%;
+	}
+	50% {
+		width: 50%;
+	}
+	75% {
+		width: 60%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.stage2{
+    .uploadBtn2{
+        .progress_bar{
+            animation: progress 4s linear;
+        }
+        .btn_txt{
+            .upload_txt,.uploading_txt,.uploaded_txt{
+			    transform: translateY(-35px);
+			}
+            .upload_txt, .uploaded_txt{
+                opacity: 0;
+            }
+            .uploading_txt{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.stage3{
+    .uploadBtn2{
+        .progress_bar{
+            width: 100%;
+        }
+        .btn_txt{
+            .upload_txt,.uploading_txt,.uploaded_txt{
+			    transform: translateY(-70px);
+			}
+            .upload_txt, .uploading_txt{
+                opacity: 0;
+            }
+            .uploaded_txt{
+                opacity: 1;
+            }
+        }
+    }
+    .msg{
+        transform: translateY(00px);
+    }
+}

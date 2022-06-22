@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 
 function UploadButton() {
 	const [trigger, setTrigger] = useState("stage1");
+	const [success, setSuccess] = useState(true);
 
 	function clicked() {
 		setTrigger("stage2");
@@ -38,20 +39,28 @@ function UploadButton() {
 						</>
 					)}
 					{trigger === "stage3" && (
-						<Icon
-							icon="ci:download-done"
-							className={`${Styles.stage3svg} ${
-								trigger === "stage3" ? Styles.svg1appear : ""
-							}`}
-							color="green"
-						/>
+						<>
+							{success ? (
+								<Icon
+									icon="ci:download-done"
+									className={`${Styles.stage3svg} ${
+										trigger === "stage3" ? Styles.svg1appear : ""
+									}`}
+									color="green"
+								/>
+							) : (
+								<Icon className={`${Styles.stage3svg} ${
+									trigger === "stage3" ? Styles.svg1appear : ""
+								}`} icon="akar-icons:circle-alert" color="red" />
+							)}
+						</>
 					)}
 				</div>
 				{/* <Icon className={Styles.cloud3} icon="ant-design:cloud-filled" color="#0063ff" /> */}
 				<div className={Styles.text}>
 					{trigger === "stage1" && <p> Upload</p>}
 					{trigger === "stage2" && <p> Uploading</p>}
-					{trigger === "stage3" && <p> Uploaded</p>}
+					{trigger === "stage3" && <p> {success?"Uploaded":"Try Again!"}</p>}
 				</div>
 			</div>
 		</div>
